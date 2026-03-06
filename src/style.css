@@ -1,95 +1,309 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-ThinItalic.ttf') format('truetype'); font-weight: 100; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-ExtraLightItalic.ttf') format('truetype'); font-weight: 200; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-SemiBoldItalic.ttf') format('truetype'); font-weight: 600; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: 'BeVietnamPro'; src: url('./assets/font/BeVietnamPro-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
-
-:root {
-  /* Palette inspired by avatar-drawing (warm kraft + clay + teal green) */
-  --background: oklch(90% 0.05 75);
-  --foreground: oklch(26% 0.03 80);
-  --card: oklch(93% 0.04 75);
-  --card-foreground: oklch(24% 0.03 80);
-  --popover: var(--card);
-  --popover-foreground: var(--card-foreground);
-  /* muted brick red tuned to the illustration's warm rust */
-  --primary: oklch(52% 0.13 40);
-  --primary-foreground: oklch(96% 0.02 95);
-  --secondary: oklch(46% 0.07 175); /* muted teal green from bamboo */
-  --secondary-foreground: oklch(92% 0.02 90);
-  --muted: oklch(86% 0.03 80);
-  --muted-foreground: oklch(40% 0.04 80);
-  --accent: oklch(64% 0.11 40); /* warm rust from cloud outline */
-  --accent-foreground: oklch(95% 0.02 90);
-  --destructive: oklch(50% 0.12 25); /* deep sienna */
-  --destructive-foreground: oklch(94% 0.02 90);
-  --border: #251f17;
-  --border-width: 2px;
-  --input: oklch(88% 0.03 80);
-  --ring: var(--primary);
-  --radius: 0.35rem;
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("./assets/font/BeVietnamPro-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
-:root[data-theme='dark'] {
-  /* Dark palette derived from light hues, lowered lightness */
-  --background: oklch(18% 0.05 75);
-  --foreground: oklch(90% 0.02 95);
-  --card: oklch(22% 0.05 75);
-  --card-foreground: oklch(90% 0.02 95);
-  --popover: var(--card);
-  --popover-foreground: var(--card-foreground);
-  --primary: oklch(58% 0.13 40);          /* brick red consistent with light */
-  --primary-foreground: oklch(16% 0.03 260);
-  --secondary: oklch(52% 0.07 175);
-  --secondary-foreground: oklch(18% 0.03 260);
-  --muted: oklch(26% 0.03 80);
-  --muted-foreground: oklch(86% 0.02 95);
-  --accent: oklch(55% 0.11 40);
-  --accent-foreground: oklch(18% 0.02 260);
-  --destructive: oklch(48% 0.12 25);
-  --destructive-foreground: oklch(16% 0.02 260);
-  --border: oklch(32% 0.03 75);
-  --border-width: 2px;
-  --input: oklch(24% 0.03 75);
-  --ring: var(--primary);
-  --radius: 0.35rem;
+:root {
+  /* Warm kraft paper neutral scale */
+  --primary-10: oklch(96% 0.02 84);
+  --primary-20: oklch(92% 0.03 82);
+  --primary-30: oklch(88% 0.04 80);
+  --primary-40: oklch(80% 0.04 80);
+  --primary-50: oklch(70% 0.04 80);
+  --primary-60: oklch(58% 0.04 80);
+  --primary-70: oklch(46% 0.04 80);
+  --primary-80: oklch(34% 0.04 80);
+  --primary-90: oklch(24% 0.03 80);
+
+  /* Clay/rust accent scale */
+  --secondary-10: oklch(95% 0.02 58);
+  --secondary-20: oklch(91% 0.03 52);
+  --secondary-30: oklch(86% 0.05 48);
+  --secondary-40: oklch(78% 0.07 45);
+  --secondary-50: oklch(69% 0.09 43);
+  --secondary-60: oklch(60% 0.11 41);
+  --secondary-70: oklch(52% 0.13 40);
+  --secondary-80: oklch(44% 0.12 39);
+  --secondary-90: oklch(36% 0.1 38);
+
+  --red-10: oklch(95% 0.02 30);
+  --red-20: oklch(91% 0.04 30);
+  --red-30: oklch(86% 0.06 29);
+  --red-40: oklch(78% 0.08 28);
+  --red-50: oklch(69% 0.1 27);
+  --red-60: oklch(60% 0.12 26);
+  --red-70: oklch(52% 0.13 25);
+  --red-80: oklch(44% 0.12 24);
+  --red-90: oklch(36% 0.1 23);
+
+  --blue-10: oklch(95% 0.02 240);
+  --blue-20: oklch(90% 0.04 240);
+  --blue-30: oklch(84% 0.06 240);
+  --blue-40: oklch(75% 0.08 240);
+  --blue-50: oklch(66% 0.1 240);
+  --blue-60: oklch(57% 0.12 240);
+  --blue-70: oklch(49% 0.13 240);
+  --blue-80: oklch(41% 0.11 240);
+  --blue-90: oklch(33% 0.09 240);
+
+  /* Muted bamboo green scale */
+  --green-10: oklch(95% 0.02 175);
+  --green-20: oklch(90% 0.03 175);
+  --green-30: oklch(84% 0.05 175);
+  --green-40: oklch(76% 0.06 175);
+  --green-50: oklch(67% 0.07 175);
+  --green-60: oklch(58% 0.08 175);
+  --green-70: oklch(50% 0.09 175);
+  --green-80: oklch(42% 0.08 175);
+  --green-90: oklch(34% 0.07 175);
+}
+
+:root[data-theme="dark"] {
+  --primary-10: oklch(16% 0.03 80);
+  --primary-20: oklch(20% 0.03 80);
+  --primary-30: oklch(25% 0.03 80);
+  --primary-40: oklch(32% 0.03 80);
+  --primary-50: oklch(42% 0.03 80);
+  --primary-60: oklch(54% 0.03 80);
+  --primary-70: oklch(68% 0.03 84);
+  --primary-80: oklch(80% 0.02 88);
+  --primary-90: oklch(90% 0.02 92);
+
+  --secondary-10: oklch(20% 0.04 40);
+  --secondary-20: oklch(25% 0.05 40);
+  --secondary-30: oklch(31% 0.06 40);
+  --secondary-40: oklch(38% 0.08 40);
+  --secondary-50: oklch(46% 0.1 40);
+  --secondary-60: oklch(55% 0.12 40);
+  --secondary-70: oklch(64% 0.11 40);
+  --secondary-80: oklch(74% 0.09 40);
+  --secondary-90: oklch(84% 0.07 40);
+
+  --red-10: oklch(20% 0.04 25);
+  --red-20: oklch(25% 0.05 25);
+  --red-30: oklch(31% 0.07 25);
+  --red-40: oklch(38% 0.09 25);
+  --red-50: oklch(46% 0.11 25);
+  --red-60: oklch(55% 0.12 25);
+  --red-70: oklch(64% 0.11 25);
+  --red-80: oklch(74% 0.09 25);
+  --red-90: oklch(84% 0.07 25);
+
+  --blue-10: oklch(20% 0.04 240);
+  --blue-20: oklch(25% 0.05 240);
+  --blue-30: oklch(31% 0.07 240);
+  --blue-40: oklch(39% 0.09 240);
+  --blue-50: oklch(47% 0.11 240);
+  --blue-60: oklch(56% 0.12 240);
+  --blue-70: oklch(66% 0.11 240);
+  --blue-80: oklch(76% 0.09 240);
+  --blue-90: oklch(86% 0.07 240);
+
+  --green-10: oklch(20% 0.03 175);
+  --green-20: oklch(25% 0.04 175);
+  --green-30: oklch(31% 0.05 175);
+  --green-40: oklch(38% 0.06 175);
+  --green-50: oklch(46% 0.07 175);
+  --green-60: oklch(55% 0.08 175);
+  --green-70: oklch(64% 0.08 175);
+  --green-80: oklch(74% 0.07 175);
+  --green-90: oklch(84% 0.06 175);
+}
+
+@theme {
+  --color-border: var(--primary-60);
+
+  --color-primary-10: var(--primary-10);
+  --color-primary-20: var(--primary-20);
+  --color-primary-30: var(--primary-30);
+  --color-primary-40: var(--primary-40);
+  --color-primary-50: var(--primary-50);
+  --color-primary-60: var(--primary-60);
+  --color-primary-70: var(--primary-70);
+  --color-primary-80: var(--primary-80);
+  --color-primary-90: var(--primary-90);
+
+  --color-secondary-10: var(--secondary-10);
+  --color-secondary-20: var(--secondary-20);
+  --color-secondary-30: var(--secondary-30);
+  --color-secondary-40: var(--secondary-40);
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-60: var(--secondary-60);
+  --color-secondary-70: var(--secondary-70);
+  --color-secondary-80: var(--secondary-80);
+  --color-secondary-90: var(--secondary-90);
+
+  --color-red-10: var(--red-10);
+  --color-red-20: var(--red-20);
+  --color-red-30: var(--red-30);
+  --color-red-40: var(--red-40);
+  --color-red-50: var(--red-50);
+  --color-red-60: var(--red-60);
+  --color-red-70: var(--red-70);
+  --color-red-80: var(--red-80);
+  --color-red-90: var(--red-90);
+
+  --color-blue-10: var(--blue-10);
+  --color-blue-20: var(--blue-20);
+  --color-blue-30: var(--blue-30);
+  --color-blue-40: var(--blue-40);
+  --color-blue-50: var(--blue-50);
+  --color-blue-60: var(--blue-60);
+  --color-blue-70: var(--blue-70);
+  --color-blue-80: var(--blue-80);
+  --color-blue-90: var(--blue-90);
+
+  --color-green-10: var(--green-10);
+  --color-green-20: var(--green-20);
+  --color-green-30: var(--green-30);
+  --color-green-40: var(--green-40);
+  --color-green-50: var(--green-50);
+  --color-green-60: var(--green-60);
+  --color-green-70: var(--green-70);
+  --color-green-80: var(--green-80);
+  --color-green-90: var(--green-90);
 }
 
 @layer base {
   body {
     @apply min-h-screen antialiased;
     font-family:
-      'BeVietnamPro',
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
+      "BeVietnamPro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       sans-serif;
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: var(--primary-20);
+    color: var(--primary-90);
   }
 }
 
 @layer components {
   .card {
-    background-color: var(--card);
-    color: var(--card-foreground);
-    border: 1.5px solid var(--border);
+    background-color: var(--primary-10);
+    color: var(--primary-90);
+    border: 1.5px solid var(--primary-60);
     border-radius: var(--radius);
   }
 
@@ -100,34 +314,34 @@
     border: 1.5px solid transparent;
   }
   .btn-primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-    border-color: var(--primary);
+    background-color: var(--secondary-70);
+    color: var(--primary-10);
+    border-color: var(--secondary-70);
   }
   .btn-outline {
     background-color: transparent;
-    color: var(--foreground);
-    border-color: var(--border);
+    color: var(--primary-90);
+    border-color: var(--primary-60);
   }
   .badge {
     @apply inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full;
-    background-color: var(--muted);
-    color: var(--muted-foreground);
-    border: 1px solid var(--border);
+    background-color: var(--primary-30);
+    color: var(--primary-70);
+    border: 1px solid var(--primary-60);
   }
   .badge-primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-    border-color: var(--primary);
+    background-color: var(--secondary-70);
+    color: var(--primary-10);
+    border-color: var(--secondary-70);
   }
   .badge-secondary {
-    background-color: var(--secondary);
-    color: var(--secondary-foreground);
-    border-color: var(--secondary);
+    background-color: var(--green-70);
+    color: var(--primary-10);
+    border-color: var(--green-70);
   }
   .badge-accent {
-    background-color: var(--accent);
-    color: var(--accent-foreground);
-    border-color: var(--accent);
+    background-color: var(--blue-60);
+    color: var(--primary-10);
+    border-color: var(--blue-60);
   }
 }

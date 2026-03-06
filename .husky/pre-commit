@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+yarn biome check --write --staged --no-errors-on-unmatched
+yarn typecheck
