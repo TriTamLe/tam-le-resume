@@ -18,24 +18,25 @@
     "@lucide/lab": "^0.1.2",
     "@lucide/vue": "^1.14.0",
     "vue": "^3.5.25",
-    "vue-i18n": "^9.14.1"
+    "vue-i18n": "^9.14.1",
+    "vue-router": "^5.0.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
     "@commitlint/cli": "^20.4.3",
     "@commitlint/config-conventional": "^20.4.3",
+    "@storybook/addon-a11y": "^10.3.6",
+    "@storybook/addon-docs": "^10.3.6",
+    "@storybook/vue3-vite": "^10.3.6",
     "@tailwindcss/vite": "^4.1.11",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/tsconfig": "^0.8.1",
     "husky": "^9.1.7",
+    "storybook": "^10.3.6",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
-    "vue-tsc": "^3.1.5",
-    "@storybook/addon-a11y": "^10.3.6",
-    "@storybook/addon-docs": "^10.3.6",
-    "@storybook/vue3-vite": "^10.3.6",
-    "storybook": "^10.3.6"
+    "vue-tsc": "^3.1.5"
   }
 }
