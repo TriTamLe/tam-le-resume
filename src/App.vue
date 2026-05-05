@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import ButtonShowcase from "@/page/ButtonShowcase.vue";
+import AppLayout from "./entries/theme/AppLayout.vue";
 </script>
 
 <template>
-  <ButtonShowcase />
+  <AppLayout>
+    <RouterView />
+  </AppLayout>
 </template>
