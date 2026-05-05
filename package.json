@@ -10,7 +10,9 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "typecheck": "vue-tsc -b --pretty false",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@lucide/lab": "^0.1.2",
@@ -30,6 +32,10 @@
     "tailwindcss": "^4.1.11",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
-    "vue-tsc": "^3.1.5"
+    "vue-tsc": "^3.1.5",
+    "@storybook/addon-a11y": "^10.3.6",
+    "@storybook/addon-docs": "^10.3.6",
+    "@storybook/vue3-vite": "^10.3.6",
+    "storybook": "^10.3.6"
   }
 }
